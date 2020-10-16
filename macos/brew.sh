@@ -42,6 +42,7 @@ brew cask install osxfuse # borgbackup requirement
 brew install borgbackup
 brew install gnupg
 brew install openssl
+brew cask install protonvpn
 
 # ------------------------------------------
 # Entertainment
