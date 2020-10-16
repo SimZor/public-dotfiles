@@ -1,0 +1,5 @@
+" Allow double press of jj to go back to normal mode from insert mode
+imap jj <Esc>
+
+" End of line key to §
+map § $
