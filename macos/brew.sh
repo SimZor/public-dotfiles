@@ -43,6 +43,8 @@ brew install borgbackup
 brew install gnupg
 brew install openssl
 brew cask install protonvpn
+brew cask install ransomwhere
+brew cask install oversight
 
 # ------------------------------------------
 # Entertainment
