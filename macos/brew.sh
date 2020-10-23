@@ -34,6 +34,7 @@ brew install tmux
 brew install ansible
 brew install docker
 brew install docker-compose
+brew cask install adobe-creative-cloud
 
 # ------------------------------------------
 # Security
