@@ -7,6 +7,7 @@ export PATH=${HOME}/Development/go-workspace/bin:$PATH                          
 export PATH=$HOME/Development/bin:$PATH                                                           # Enable execution of binaries in dev binary
 export PATH=/usr/local/bin:$PATH
 export PATH=${HOME}/.composer/vendor/bin/:$PATH                                                   # Composer path
+export PATH=$PATH:$(go env GOPATH)/bin                                                            # Add go to path
 
 # Borg backups
 export BORG_RSH='ssh -i ~/Keys/storage_server/storage_rsa'

@@ -15,6 +15,7 @@ brew install node
 brew install php
 brew install python3
 # brew install dotnet-sdk
+brew install go
 
 # ------------------------------------------
 # Other Utilities
