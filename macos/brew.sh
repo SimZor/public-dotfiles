@@ -33,7 +33,7 @@ brew install gh
 brew install composer
 brew install tmux
 brew install ansible
-brew install docker
+brew cask install docker
 brew install docker-compose
 brew cask install adobe-creative-cloud
 
