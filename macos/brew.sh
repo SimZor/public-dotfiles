@@ -47,6 +47,8 @@ brew install openssl
 brew cask install protonvpn
 brew cask install ransomwhere
 brew cask install oversight
+brew install ykman
+brew cask install yubico-authenticator
 
 # ------------------------------------------
 # Entertainment
