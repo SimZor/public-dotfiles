@@ -36,6 +36,7 @@ brew install ansible
 brew cask install docker
 brew install docker-compose
 brew cask install adobe-creative-cloud
+brew install awscli
 
 # ------------------------------------------
 # Security
