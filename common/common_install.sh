@@ -44,17 +44,22 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # -------------------------------------------------------
 read -p "Do you wish to move dotfiles from this directory to home? (y/n)" $yn
 if [ "$yn" == "y" ]
-	then
-		cp actual/.* ~/
-	fi
+    then
+        cp actual/.* ~/
+    fi
 
 # -------------------------------------------------------
 # Neovim Configuration
 # -------------------------------------------------------
 read -p "Do you wish to install neovim init file? (y/n)" $yn
 if [ "$yn" == "y" ]
-	then
-		mkdir ~/.config
-		mkdir ~/.config/nvim
-		cp neovim/init.vim ~/.config/nvim/init.vim
-	fi
+    then
+        mkdir ~/.config
+        mkdir ~/.config/nvim
+        cp neovim/init.vim ~/.config/nvim/init.vim
+fi
+
+# -------------------------------------------------------
+# Ruby Support for Neovim
+# -------------------------------------------------------
+gem install neovim
