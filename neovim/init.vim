@@ -19,6 +19,11 @@ set wrap!                                           " Disable linewrap
 set ignorecase                                      " Ignore lowercase/uppercase
 set smartcase                                       " Searching with lowercase to ignore uppercase/lowercase
 
+" Omni
+set nocompatible
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 highlight cursorline cterm=NONE ctermbg=237 ctermfg=NONE   " Highlight cursorline
 highlight ExtraWhitespace ctermbg=darkred guibg=darkred    " show trailing spaces
 
@@ -56,6 +61,7 @@ autocmd Filetype php setlocal ts=4 sw=4 expandtab
 autocmd Filetype scss setlocal ts=2 sw=2 expandtab
 
 autocmd BufRead,BufNewFile *.blade.php set ts=2 sw=2 expandtab " Set 2 spaces for blade php files
+autocmd BufRead,BufNewFile *.jsx set ts=2 sw=2 expandtab " Set 2 spaces for jsx files
 
 " 4 Width Tabs for golang
 au FileType go set noexpandtab
@@ -110,6 +116,7 @@ Plug 'jaawerth/neomake-local-eslint-first' " use local eslint project first
 Plug 'https://github.com/sqwishy/vim-sqf-syntax.git' " SQF Syntax Highlighting
 
 Plug 'hashivim/vim-terraform' " Terraform plugin for vim
+Plug 'juliosueiras/vim-terraform-completion'
 
 " End plugin system
 call plug#end()
@@ -124,7 +131,7 @@ nmap     <C-F>p <Plug>CtrlSFPwordPath
 
 " Terraform settings
 let g:terraform_align=1
-let g:terraform_fold_section=1
+let g:terraform_fold_sections=0
 let g:terraform_fmt_on_save=1
 
 " Define some single Blade directives. This variable is used for highlighting only.
@@ -273,3 +280,15 @@ nnoremap <Leader>f :NERDTreeToggle<Enter>
 " Fix not being able to jump out of neovim in nerdtree
 let g:NERDTreeMapJumpNextSibling = '<Nop>'
 let g:NERDTreeMapJumpPrevSibling = '<Nop>'
+
+" -------------------------------------- Deoplete Terraform ---
+" (Optional) Default: 0, enable(1)/disable(0) plugin's keymapping
+let g:terraform_completion_keys = 1
+" (Optional) Default: 1, enable(1)/disable(0) terraform module registry completion
+let g:terraform_registry_module_completion = 1
+" --
+let g:deoplete#omni_patterns = {}
+let g:deoplete#omni_patterns.terraform = '[^ *\t"{=$]\w*'
+let g:deoplete#enable_at_startup = 1
+call deoplete#initialize()
+" -------------------------------------- Deoplete Terraform ---
