@@ -23,6 +23,7 @@ brew install go
 brew install ripgrep
 brew install tokei
 brew install tree
+brew install openconnect # Cisco AnyConnect Alternative
 
 # ------------------------------------------
 # Developer Utilities
