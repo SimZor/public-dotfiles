@@ -52,6 +52,12 @@ sudo snap install phpstorm -y
 sudo snap install pycharm -y
 sudo snap install clion -y
 
+sudo pacman -S go # install golang
+
+# terraform
+sudo pamac install terraform -y # install terraform
+terraform -install-autocomplete
+
 # Python
 # ------------------------------------------------------------------
 sudo pacman -S python-pip
