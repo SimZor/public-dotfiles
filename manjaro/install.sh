@@ -52,6 +52,17 @@ sudo snap install phpstorm -y
 sudo snap install pycharm -y
 sudo snap install clion -y
 
+# Node version manager
+sudo pacman -S nvm -y
+source /usr/share/nvm/init-nvm.sh
+nvm install stable
+nvm use stable
+npm install -g neovim
+
+# PHP and Composer
+sudo pacman -S php -y
+sudo pacman -S composer -y
+
 sudo pacman -S go # install golang
 
 # terraform
@@ -61,6 +72,8 @@ terraform -install-autocomplete
 # Python
 # ------------------------------------------------------------------
 sudo pacman -S python-pip
+
+sudo pip install neovim
 
 
 # Yubikey
