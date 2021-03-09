@@ -35,6 +35,13 @@ sudo flatpak install slack -y
 # ------------------------------------------------------------------
 sudo pacman -S glances -y # hardware monitoring
 
+
+# Python
+# ------------------------------------------------------------------
+sudo pacman -S python-pip
+
+sudo pip install neovim
+
 # Developer Environment
 # ------------------------------------------------------------------
 
@@ -69,12 +76,13 @@ sudo pacman -S go # install golang
 sudo pamac install terraform -y # install terraform
 terraform -install-autocomplete
 
-# Python
-# ------------------------------------------------------------------
-sudo pacman -S python-pip
+# openstack
+sudo pip install python-openstackclient
 
-sudo pip install neovim
-
+# aws cli
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
 
 # Yubikey
 # ------------------------------------------------------------------
