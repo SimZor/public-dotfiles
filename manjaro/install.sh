@@ -58,6 +58,7 @@ sudo snap install datagrip -y
 sudo snap install phpstorm -y
 sudo snap install pycharm -y
 sudo snap install clion -y
+sudo snap install zaproxy -y --classic
 
 # Node version manager
 sudo pacman -S nvm -y
