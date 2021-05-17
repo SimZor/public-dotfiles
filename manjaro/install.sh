@@ -29,11 +29,12 @@ sudo systemctl start containerd.service # initial start
 # Communication Tools
 # ------------------------------------------------------------------
 sudo pacman -S discord -y
-sudo flatpak install slack -y
+sudo snap install slack
+# sudo flatpak install slack -y
 
 # Utilities
 # ------------------------------------------------------------------
-sudo pacman -S glances -y # hardware monitoring
+# sudo pacman -S glances -y # hardware monitoring
 
 
 # Python
@@ -56,9 +57,9 @@ sudo pacman -S alacritty -y
 # Jetbrains
 sudo snap install datagrip -y
 sudo snap install phpstorm -y
-sudo snap install pycharm -y
-sudo snap install clion -y
-sudo snap install zaproxy -y --classic
+# sudo snap install pycharm -y
+# sudo snap install clion -y
+# sudo snap install zaproxy -y --classic
 
 # Node version manager
 sudo pacman -S nvm -y
@@ -71,14 +72,14 @@ npm install -g neovim
 sudo pacman -S php -y
 sudo pacman -S composer -y
 
-sudo pacman -S go # install golang
+# sudo pacman -S go # install golang
 
 # terraform
 sudo pamac install terraform -y # install terraform
 terraform -install-autocomplete
 
 # openstack
-sudo pip install python-openstackclient
+# sudo pip install python-openstackclient
 
 # aws cli
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -98,12 +99,27 @@ systemctl start pcscd.service
 sudo pacman -S openconnect
 
 # ProtonVPN
-sudo pacman -S dialog
-sudo pip install protonvpn-cli
+# sudo pacman -S dialog
+# sudo pip install protonvpn-cli
 
 # Reminna Remote Desktop
 # ------------------------------------------------------------------
-sudo pacman -S remmina
-sudo pacman -S freerdp # rdp support
-sudo pacman -S remmina-plugin-rdesktop # rdp support
-sudo pacman -S libvncserver # vnc support
+# sudo pacman -S remmina
+# sudo pacman -S freerdp # rdp support
+# sudo pacman -S remmina-plugin-rdesktop # rdp support
+# sudo pacman -S libvncserver # vnc support
+
+# Install vim plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Neovim init
+mkdir ~/.config/nvim
+cp ../nvim/init.vim ~/.config/nvim/init.vim
+
+cp -a ../actual/. ~/
