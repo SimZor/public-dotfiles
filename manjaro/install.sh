@@ -109,6 +109,10 @@ sudo pacman -S openconnect
 # sudo pacman -S remmina-plugin-rdesktop # rdp support
 # sudo pacman -S libvncserver # vnc support
 
+# Network Tools
+sudo pacman -S dnsutils -y
+sudo pacman -S net-tools -y
+
 # Install vim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -122,4 +126,10 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 mkdir ~/.config/nvim
 cp ../nvim/init.vim ~/.config/nvim/init.vim
 
+# Theme
+sudo cp -r ./appearance/Orchis-dark /usr/share/themes/Orchis-dark
+suod cp -r ./appearance/Tela-blue /usr/share/icons/Tela-blue
+sudo cp -a ./appearance/jm_ttf/. /usr/share/fonts/TTF/
+
+# Copy dotfiles
 cp -a ../actual/. ~/
